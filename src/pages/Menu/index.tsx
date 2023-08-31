@@ -2,16 +2,15 @@ import React from "react";
 import { StyleSheet, Image, Dimensions, Text, View } from "react-native";
 
 import topo from '../../../assets/topo.jpg';
-import logo from '../../../assets/logo.avif';
+import logo from '../../../assets/logo.png';
 
 const width = Dimensions.get('screen').width;
 
 export default function Menu (){
     return <>
-    <Image source={topo} style={estilos.topo} />
-    <Text style= {estilos.titulo}>Detalhe do Menu</Text>
+    <Image source={logo} style={estilos.logo} />
     <View style= {estilos.carrinho}>
-        <Text style= {estilos.titulocarrinho}>Menu de Compras</Text>
+        <Text style= {estilos.titulo}>Menu de Compras</Text>
         <View style=  {estilos.fazenda}>
         <Image style= {estilos.imagemFazenda} source={logo}/>
         <Text style= {estilos.nomeFazenda}>Confeitaria Cake Shop</Text>
@@ -19,14 +18,14 @@ export default function Menu (){
         <Text style={estilos.descricao}>Uma cesta com os melhores de nossos produtos, perfeita para presentear alguém especial!
         </Text>
         <Text>R$ 80,00</Text>
-       </View>
-       </>
+    </View>
+    </>
 }
 
 const estilos = StyleSheet.create({
-    topo: {
+    logo: {
         width: "100%",
-        height: 578 / 768 * width
+        height: 400 / 700 * width
     },
     
     titulo: {
