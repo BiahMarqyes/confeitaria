@@ -4,6 +4,8 @@ import { StyleSheet, Image, Dimensions, Text, View } from "react-native";
 import bolo from '../../../assets/bolo.jpg';
 import logo from '../../../assets/logo.png';
 import macaron from '../../../assets/macaron.jpg';
+import brownie from '../../../assets/brownie.jpg';
+import brigadeiro from '../../../assets/brigadeiro.jpg';
 
 const width = Dimensions.get('screen').width;
 
@@ -21,16 +23,26 @@ export default function Menu (){
                 <Text style= {estilos.descard}>A partir de R$ 50,00</Text>
             </View>
 
-            <View style= {estilos.card}>
+            <View style= {estilos.card2}>
                 <Image style= {estilos.imgcard} source={macaron}/>
                 <Text style= {estilos.titcard}>Macarons</Text>
                 <Text style= {estilos.descard}>A partir de R$ 20,00</Text>
             </View>
         </View>
 
-        <Text style={estilos.descricao}>Uma cesta com os melhores de nossos produtos, perfeita para presentear alguém especial!
-        </Text>
-        <Text>R$ 80,00</Text>
+        <View style= {estilos.fundocard}>
+            <View style= {estilos.card}>
+                <Image style= {estilos.imgcard} source={brownie}/>
+                <Text style= {estilos.titcard}>Brownie</Text>
+                <Text style= {estilos.descard}>A partir de R$ 15,00</Text>
+            </View>
+
+            <View style= {estilos.card2}>
+                <Image style= {estilos.imgcard} source={brigadeiro}/>
+                <Text style= {estilos.titcard}>Brigadeiro</Text>
+                <Text style= {estilos.descard}>A partir de R$ 10,00</Text>
+            </View>
+        </View>
     </View>
     </>
 }
@@ -55,7 +67,7 @@ const estilos = StyleSheet.create({
         width: "100%",
         textAlign: "center",
         color: "#EFEFEF",
-        paddingTop: 25,
+        paddingTop: 15,
     },
 
     bemvindo2: {
@@ -79,6 +91,17 @@ const estilos = StyleSheet.create({
         backgroundColor: "#C5D1F6",
         borderRadius: 10,
         padding: 10,
+        marginBottom: "5%",
+    },
+
+    card2: {
+        width: "47%",
+        height: 215,
+        backgroundColor: "#C5D1F6",
+        borderRadius: 10,
+        padding: 10,
+        marginBottom: "5%",
+        marginLeft: "5%",
     },
 
     imgcard: {
@@ -107,55 +130,4 @@ const estilos = StyleSheet.create({
         paddingTop: 4,
     },
 
-
-
-
-
-    
-    titulo: {
-        fontSize: 24,
-        fontWeight: "bold",
-        lineHeight: 26,
-        width: "100%",
-        textAlign: "center",
-        color: "white",
-        position: "absolute",
-        padding: 16
-    },
-       titulocarrinho:  {
-           fontSize : 26,
-           lineHeight: 42,
-           color: "#464646"
-       },
-
-       
-
-       nomeFazenda: {
-         fontSize: 16,
-         lineHeight: 26,
-         marginLeft: 12,
-         fontWeight: "bold"
-        },
-
-        imagemFazenda: {
-            width: 32,
-            height: 32
-        },
-
-        fazenda:{
-            flexDirection: "row",
-            paddingVertical: 12
-        },
-        descricao:{
-            color: "A3A3A3",
-            fontStyle: "italic"
-        },
-
-        preco: {
-           fontSize: 26,
-           lineHeight: 42,
-           color: "#2A9F85",
-           marginTop: 8
-
-        }
-  })
+})
